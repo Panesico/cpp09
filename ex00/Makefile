@@ -35,7 +35,7 @@ all: $(NAME)
 # Compile the executable
 $(NAME): $(OBJ_FILES)
 	@printf "$(YELLOW)Compiling [$(NAME)]...$(RESET)\n"
-	@$(CXX) $(CXXFLAGS) $(OBJ_FILES) -o $(NAME)
+	@$(CXX) $(CXXFLAGS) $(OBJ_FILES) -o $(NAME) -lstdc++
 	@printf "$(GREEN)Finished [$(NAME)]$(RESET)\n"
 	@$(eval COMPILED=1)
 	@if [ $(COMPILED) -eq 1 ]; then \

@@ -31,12 +31,12 @@ public:
     void readCSV(const std::string& filename);
     time_t parseDateToUnixTime(const std::string& date);
     bool isDirectory(const std::string& path);
-    std::map<time_t, double> &getExchangeRates();
 	double getExchange(time_t date);
     void printExchangeRates(const std::string& filename);
     std::string unixTimeToDate(time_t unix_time);
     std::string trim(const std::string& str);
-
+    std::map<time_t, double> getExchangeRates() const;
+    void setExchangeRates(std::map<time_t, double> &exchangeRates);
 };
 
 #endif // BITCOINEXCHANGE_HPP
